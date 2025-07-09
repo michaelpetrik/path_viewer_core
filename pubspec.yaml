@@ -1,7 +1,8 @@
 name: path_viewer_core
 description: A starting point for Dart libraries or applications.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+publish_to: none
+repository: https://github.com/michaelpetrik/path_viewer_core
 
 environment:
   sdk: ^3.8.1
