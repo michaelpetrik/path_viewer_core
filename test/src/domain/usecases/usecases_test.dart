@@ -20,6 +20,11 @@ class _MockShellRepository implements ShellRepository {
   Future<List<PathEntry>> parsePath(String path, ShellType shellType) async {
     return pathEntries;
   }
+
+  @override
+  Future<String> getPath() async {
+    return 'test';
+  }
 }
 
 void main() {

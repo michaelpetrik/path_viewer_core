@@ -1,1 +1,1 @@
-enum ShellType { bash, zsh, fish, powershell, unknown }
+enum ShellType { bash, zsh, fish, powershell, cmd, unknown }
