@@ -44,14 +44,10 @@ dependencies:
 import 'package:path_viewer_core/path_viewer_core.dart';
 
 void main() {
-  final detector = ShellDetector();
-  final shell = detector.detect(); // ShellType.zsh, e.g.
+  final shell = detectShell(); // ShellType.zsh, e.g.
 
-  final provider = PathProvider();
-  final rawPath = provider.read();
-
-  final entries = StandardPathParser().parse(rawPath);
-  final duplicates = entries.where((e) => e.isDuplicate).toList();
+  final entries = listPath();
+  final duplicates = findDuplicates();
 
   print('Found ${duplicates.length} duplicates:');
   duplicates.forEach(print);
